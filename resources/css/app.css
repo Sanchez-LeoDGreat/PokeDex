@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 @import "tailwindcss";
+@import "@flaticon/flaticon-uicons/css/all/all";
 
 @source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
 @source "../../storage/framework/views/*.php";
@@ -13,7 +14,15 @@
 }
 
 @layer components{
+    input[type="text"]{
+        @apply bg-white px-2 py-1
+    }
+
     h1{
         @apply text-4xl
+    }
+
+    button{
+        @apply cursor-pointer;
     }
 }

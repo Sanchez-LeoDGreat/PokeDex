@@ -1,5 +1,16 @@
-export default function Home(){
+import PokemonCardContainer from "../Components/PokemonCardContainer";
+import PokemonCard from "../Components/PokemonCard";
+
+export default function Home({ pokemons }){
+    console.log(pokemons.original[19])
+
     return (
-        <h1></h1>
+        <div>
+            <PokemonCardContainer>
+                {pokemons.original.map((pokemon) => (
+                    <PokemonCard pokemon={pokemon}/>
+                ))}
+            </PokemonCardContainer>
+        </div>
     );
 }
