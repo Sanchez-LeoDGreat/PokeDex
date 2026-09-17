@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Services\PokeApiService;
 use Inertia\Inertia;
 
 class HomeController extends Controller

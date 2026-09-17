@@ -18,4 +18,10 @@ class PokeApiController extends Controller
         $pokemons = $this->pokeApi->pokemon->get();
         return response()->json($pokemons);
     }
+
+    public function more(int $offset, int $limit)
+    {
+        $pokemons = $this->pokeApi->pokemon->get($offset, $limit);
+        return response()->json($pokemons);
+    }
 }

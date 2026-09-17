@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Http;
 
 class PokemonService extends MyUrlService
 {
-    public function get(int $offset = 0, int $limit = 20)
+    public function get(int $offset = 0, int $limit = 12)
     {
         $response = $this->searchURL("pokemon/?offset={$offset}&limit={$limit}", '');
         $data = $response->getData();
