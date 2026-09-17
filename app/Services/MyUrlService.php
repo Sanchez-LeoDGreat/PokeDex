@@ -8,7 +8,7 @@ class MyUrlService
 {
     public function addPathToURL(string ...$path)
     {
-        return config("api.PokeApi") . '/' . implode("/", $path);
+        return config("api.pokeApi") . '/' . implode("/", $path);
     }
 
     public function searchURL(string $path, string $search)

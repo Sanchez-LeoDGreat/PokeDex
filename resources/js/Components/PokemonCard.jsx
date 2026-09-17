@@ -1,4 +1,5 @@
-import TypingCardHolder from "./TypingCardHolder";
+import TypingCardContainer from "./TypingCardContainer";
+import TypingCard from "./TypingCard";
 
 export default function PokemonCard({ pokemon }){
     return (
@@ -8,7 +9,9 @@ export default function PokemonCard({ pokemon }){
                 <span className="absolute z-10 left-1">{ pokemon.id }</span>
                 <img src={pokemon.sprites.front_default} alt={pokemon.name} className="w-[calc(30dvw-0.4rem)]"/>
             </div>
-            <TypingCardHolder types={pokemon.types}/>
+            <TypingCardContainer>
+                {pokemon.types.map((t, i) => <TypingCard key={`${pokemon.id}-${i}`} type={t.type.name}/>)}
+            </TypingCardContainer>
         </li>
     );
 }

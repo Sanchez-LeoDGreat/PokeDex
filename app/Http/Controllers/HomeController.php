@@ -9,10 +9,6 @@ class HomeController extends Controller
 {
     public function show()
     {
-        $pokeApi = new PokeApiService();
-        $pokemons = $pokeApi->pokemon->getFirst20();
-        return Inertia::render("Home", [
-            'pokemons' => $pokemons
-        ]);
+        return Inertia::render("Home");
     }
 }
